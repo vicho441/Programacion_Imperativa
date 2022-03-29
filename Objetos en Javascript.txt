@@ -1,0 +1,118 @@
+----------------------------------------Declaracion de un objeto----------------------------------------
+//se declara una variable y despues del igual se pone {}; para avisar que hablamos de un objeto
+const ventilador = {
+	altura: 20,
+	color: 'negro',
+	potencia: 200
+};
+
+----------------------------------------Anotación por puntos y corchetes----------------------------------------
+//Se usa para acceder al valor de un objeto
+
+const ventilador = {
+	altura: 20,
+	color: "negro",
+	potencia: 200
+};
+
+console.log(ventilador.altura);     //Esto retornará 20
+
+//Asi se accede a un objeto por puntos ahora, abajo se muestra como se hace por corchetes
+
+console.log(ventilador["color"]);  //Esto retornara negro
+
+//Ahora porque se usa esto si es menos dinamico? abajo hay un ejemplo donde se usa corchetes de una forma dinamica con el usuario
+
+const buscar = {
+	porNombre: 'shrek',
+	porFechaDeSalida: '13/12/2005',
+	porGenero: 'infantil'
+};
+var elijeUsuario = "porNombre";       //El usuario eligio buscar por nombre, lo guardamos en una varible
+console.log(buscar[elijeUsuario]);   //Imprime esa variable, en este caso retornará, 'shrek'
+
+
+----------------------------------------Asignación por destructuring----------------------------------------
+const ventilador = {
+	altura: 20,
+	color: "negro",
+	potencia: 200
+};
+
+const {altura, color} = ventilador;  //Creamos dos constantes con los datos del objeto que querramos
+console.log(altura);  //Retornará 20
+
+// ...(nombreDeLaVariable que va a ser objeto)     yo le pongo rest, de resto
+const otroObjeto = {
+    vida: 100,
+    oro: 2500,
+    dios: 'Kratos'
+};
+
+const { dios, ...rest } = otroObjeto;     //Creamos una variable con el dato de dios y otro objeto con el resto de datos
+
+
+----------------------------------------Objetos dentro de objetos----------------------------------------
+//Adentro de los objetos pueden haber mas objetos
+const otroObjeto = {
+    vida: 100,
+    oro: 2500,
+    dios: {
+	dios1: 'Kratos',
+	dios2: 'Afrodita'
+   }
+};
+
+//Para llamarlo es 
+console.log(otroObjeto.dios.dios1); //Esto retornara: 'Kratos'
+
+
+----------------------------------------Metodos de objetos----------------------------------------
+//Si un objeto almacena unna funcion, es un metodo de objeto
+const otroObjeto = {
+    vida: 100,
+    oro: 2500,
+    dios: 'Kratos'
+    saludar: function() {
+	return: 'Hola me llamo Roger'
+}
+};
+
+----------------------------------------This----------------------------------------
+//Sirve para hacer referencia dentro de un objeto, de una propiedad que este tiene
+
+const otroObjeto = {
+    vida: 100,
+    oro: 2500,
+    dios: 'Kratos'
+    saludar: function() {
+	return: 'Hola me llamo' + this.dios;      //Retornará: 'Hola me llamo Kratos'
+}
+};
+
+
+----------------------------------------Modificar y Crear nuevas propiedades de un objeto----------------------------------------
+const ventilador = {
+	altura: 20,
+	color: 'negro',
+	potencia: 200
+};
+
+//Imaginemos que queremos modificar el color a blanco es tan facil como:
+
+ventilador.color = "blanco";   //Listo, cuando llamemos al objeto ventilador tendra color blanco
+
+//Ahora imaginemos que queremos agregarle un nuevo atributo, es tan facil como:
+ventilador.precio = 100;   //Listo cuando llamemos el objeto tendra un precio agregado
+
+
+
+
+
+
+
+
+
+
+
+

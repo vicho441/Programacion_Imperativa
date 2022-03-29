@@ -1,0 +1,189 @@
+npm init
+npm i prompt-sync
+const prompt = require("prompt-sync")({ sigint: true });
+let operacionElegida = prompt( );
+
+
+
+
+---------------------------------------FUNCIONES:---------------------------------
+funcion expresada:    const funcionEjemplo = function( //ACA VA UN VALOR ) { //ACA VA LA FUNCION A CUMPLIR }
+
+funcion declarada:    function funcionEjemplo( //ACA VA UN VALOR ) { //ACA VA LA FUNCION A CUMPLIR }
+
+arrow function:   const funcionEjemplo = //ACA VA UN VALOR => //ACA VA LA FUNCION A CUMPLIR
+en el arrow function no hace falta devolver un resultado con return
+
+
+---------------------------------------IF:---------------------------------
+if simple:   if( //ARGUMENTO A CUMPLIR ) { //SI EL ARGUMENTO SE CUMPLE SE EJECTA ESTE CODIGO }
+
+if else :    if( //ARGUMENTO A CUMPLIR ) { //SI EL ARGUMENTO SE CUMPLE SE EJECTA ESTE CODIGO } else { //SI EL ARGUMENTO NO SE CUMPLE SE EJECUTA ESTE CODIGO }
+
+if else if: if( //ARGUMENTO A CUMPLIR ) { //SI EL ARGUMENTO SE CUMPLE SE EJECTA ESTE CODIGO } else if() { } //OTRO IF
+
+IF TERNARIO: let mayor = condicion ? si se cumple : si no se cumple;
+//OTRO EJ: 
+let fruta = 'manzana';
+let resultado = fruta == 'manzana' ? 'buenisimo, me gustan las manzanas' : 'ufa, queria manzana';
+console.log(resultado);  //MOSTRARA EL STRING DE RESPUESTA
+
+---------------------------------------SWITCH:---------------------------------
+SWITCH: 
+switch( //CONDICION QUE VAMOS A EVALUAR ) { 
+       case 'ALGO QUE ESTEMOS EVALUANDO':
+           //CODIGO QUE VA A EJECUTAR EN CASO DE QUE ESE ALGO SE CUMPLA
+           break //TERMINA DE EJECUTAR EL CODIGO
+       case 'ALGO QUE ESTEMOS EVALUANDO':
+           //CODIGO QUE VA A EJECUTAR EN CASO DE QUE ESE ALGO SE CUMPLA
+           break //TERMINA DE EJECUTAR EL CODIGO
+       default: 
+          //CODIGO QUE VA A EJECUTAR EN CASO QUE NO SE CUMPLA NINGUNA OTRA CONDICION
+          break
+}
+
+//EJEMPLO:
+let semaforo = 'verde';
+
+switch(semaforo) {
+    case 'verde':
+       console.log('puedo cruzar');
+       break
+     case 'amarillo':
+       console.log('precaución');
+       break
+     case 'rojo':
+       console.log('no puedo cruzar');
+       break 
+      default:
+       console.log('Semaforo Roto');
+       break
+}
+
+
+---------------------------------------for loop:---------------------------------
+Su funcion es ejecutar una accion en loop
+
+for ( INICIO; CONDICION; MODIFICADOR ) { //CODIGO QUE SE EJECUTARA EN LOOP };0
+
+//EJEMPLO
+for ( let i = 1; i <= 5; i++ ) {
+   console.log("Cuento")
+}
+
+let i = 1 //ESTABLECE QUE HAY UNA VARIABLE LLAMADA I Y QUE SU VALOR ES 1
+i <= 5 //EL CODIGO SE VA A REPETIR HASTA QUE SE CUMPLA ESTA CONDICION
+i++ //ESTABLECE QUE CADA VEZ QUE SE EJECUTE LA FUNCION SE LE VA A SUMAR 1 Al la variable i
+
+//OTRO EJEMPLO
+function noParesDeContarImparesHasta(numero){
+    let numerosImpares = 0; //Le asignamos un valor base a esta varible
+
+    for ( let i = 0; i <= numero; i++) {      //la funcion se va a ejecutar hasta que i sea igual a 'numero'
+        if(i % 2 !== 0) {
+            numerosImpares++;  //Si el valor de i es impar, se le sumara a la variable numerosImpares 1
+        }
+    }
+    return numerosImpares;
+}
+
+---------------------------------------ARRAYS:---------------------------------
+
+let miArray = ['star wars', 23, true];
+
+las posiciones de un array empiezan en 0 y sigue de forma creciente, 'star wars' = 0 / 23 = 1 / true = 2
+miArray[1]; //Estamos accediendo al elemento que está en la posicion 1
+
+miArray.length; //nos va a dar 3 porque es a suma de elementos dentro de un array, y en este caso son 3
+
+!!!METODOS DE ARRAYS!!!
+
+// .push()            //AGREGA DE ULTIMA POSICION UN NUEVO OBJETO EN UN ARRAY
+let colores = ['rojo', 'naranja', 'azul'];
+colores.push('violeta'); //LE AGREGA EL COLOR VIOLETA AL ARRAY
+console.log(colores); // ['rojo', 'naranja', 'azul', 'violeta']
+
+// .unshift()   //AGREGA DE PRIMERA POSICION UN NUEVO OBJETO EN UN ARRAY
+
+// .pop()        ELIMINA EL ULTIMO OBJETO DE UN ARRAY
+let colores = ['rojo', 'naranja', 'azul'];
+let ultimoColor = colores.pop(); //ELIMINA EL ULTIMO OBJETO DEL ARRAY y lo almacena en una variable
+console.log(colores); //['rojo', 'naranja']
+console.log(ultimoColor); //['azul']
+
+// .shift()      ELIMINA EL PRIMER OBJETO DE UN ARRAY
+
+
+// .join()       UNE LOS ELEMENTOS DE UN ARRAY USANDO DE SEPARADOR LO QUE LE DIGAMOS, SI NO ACLARAMOS NADA LOS UNE POR COMA
+let colores = ['rojo', 'naranja', 'azul'];
+let Unidos = colores.join(); //['rojo,naranja,azul'] 
+
+let colores = ['rojo', 'naranja', 'azul'];
+let Unido = colores.join(' - ');  //['rojo - naraja - azul']
+
+// .indexOF();     BUSCA EL ELEMENTO QUE LE PASEMOS Y SI ESTE EXISTE DEVUELVE COMO VALOR DONDE ESTA POSICIONADO, SI NO EXISTE DEVUELVE -1
+let colores = ['rojo', 'naranja', 'azul'];
+colores.indexOF('azul');  //VA A DEVOLVER 2
+colores.indexOF('Violeta'); //VA A DEVOLVER -1
+
+// .lastindexOF()    LO MISMO QUE EL INDEX OF PERO BUSCA AL REVEZ
+let colores = ['rojo', 'naranja', 'azul'];
+colores.lastindexOF('azul'); //RETORNA 0
+
+// .includes()      RECIBE UN PARAMETRO Y DEVUELVE UN BOOLEANO
+let colores = ['rojo', 'naranja', 'azul'];
+colores.includes('rojo');  //RETORNA TRUE
+colores.includes('violeta'); //RETORNA FALSE
+
+//.slice()     Clona un array
+let clonacion = unArray.slice();
+
+---------------------------------------METODOS DE STRINGS:---------------------------------
+let nombre = 'juan'
+nombre[3]; //DEVOLVERA 'n' 
+
+// .length      CANTIDAD DE CARACTERES DE UN STRING CONTANDO LOS ESPACIOS
+let miSerie = 'Mad Men';
+miSerie.length;  //DEVUELVE 7
+
+let ArrayNombres = ['Mad Men', 'Lost', 'YOU'];
+ArrayNombres[0].length; //DEVUELVE 7 TAMBIEN PORQUE ESTOY LLAMANDO UN STRING
+
+// .indexOF()     BUSCA EN EL STRING EL PARAMETRO RECIBIDO Y DEVUELVE EL PRIMER CARACTER 
+let saludo = 'Hola! Mi nombre es Santiago';     
+saludo.indexOF('mi'); //DEVUELVE 7
+
+// .slice()         //CORTA EL STRING EN LA POCICION QUE LE DIGAMOS
+let frase = 'Breaking Bad Rules';
+frase.slice(9, 12);  //DEVUELVE 'bad'
+frase.slice(13); //DEVUELVE RULES
+
+// .trim()        ELIMINA LOS ESPACIOS QUE HAY ALFINAL Y PRNCIPIO DE UN STRING
+let nombreCompleto = '      Homero Simpson         '
+nombreCompleto.trim();   //RETORNARA 'Homero Simpson'
+
+// .replace()        REMPLAZA PARTE DE UN STRING POR OTRA
+let frase = 'Aguante Python';
+frase.replace('Python', 'JavaScript');    //RETORNARA 'Aguante JavaScript'
+
+// .split()      DIVIDE EL STRING POR MEDIO DEL VALOR QUE LE PASEMOS
+let frase = 'hola mundo cruel';
+frase.split(' ');   //RETORNA ['hola', 'mundo', 'cruel'];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
