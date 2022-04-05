@@ -1,0 +1,20 @@
+El foreach es una forma mas simple de hacer un bucle
+VENTAJAS: Pesa menos, Es mas rapido y Legible. En las empresas se usa muchismo mas que el for. 
+
+let arrayColegio = [
+	{
+		nombre: San Alverti,
+		esTecnico: false
+	},
+	{
+		nombre: Balvanera,
+		esTecnico: true
+	}
+]
+
+arrayColegio.foreach(Alumno => {
+	console.log(Alumno.nombre)
+});
+
+//ESTO VA A TRAER DEL ARRAY 'arrayColegio' por cada elemento existente en ese array el nombre
+// osea traerá en dos log diferentes, San Alverti y Balvanera

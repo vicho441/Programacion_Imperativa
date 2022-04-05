@@ -1,0 +1,5 @@
+Aca voy a poner Como usar un ForEach que va a ser muchisimo mas Util para Su futuro como programador/a/e. 
+IMPORTANTE: no lo vimos en este modulo y para este momento no es necesario saberlo. 
+Esto es solo para l@s curiosos que quieran aprender mas cosas
+
+El Foreach es mucho mas util y simple
