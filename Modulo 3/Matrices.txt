@@ -1,0 +1,94 @@
+--------------------------------------DEFINICION:--------------------------------------
+Es una estructura de datos que almacena datos de forma bidimensional. (La forma mas facil de entenderlo, es que, una matriz es un array 
+adentro de otro array)
+
+const Edades = [
+	[20, 13, 45],
+	[48, 93, 100],
+	[11, 7, 9, 40]
+]
+//EN ESTE ARRAY "Edades" TENEMOS 3 ARRAYS. 
+
+--------------------------------------COMO SE ORGANIZA--------------------------------------
+Se organiza por filas y columnas, 
+
+const Edades = [
+	[20, 13, 45],   //FILA 0
+	[48, 93, 100],  //FILA 1
+	[11, 7, 9, 40]  //FILA 2
+]
+
+Adentro de las filas tenemos las Columnas, Abajo esta la fila 0 del array "Edades"   
+	[20,  //COLUMNA 0
+	13,   //COLUMNA1
+	45]   //COLUMNA2
+
+Volviendo al array "Edades", la fila 1, columna 2 seria el numero 100
+
+
+--------------------------------------COMO LLAMARLO--------------------------------------
+const Edades = [
+	[20, 13, 45],
+	[48, 93, 100],
+	[11, 7, 9, 40]
+]
+
+
+-Para llamar a una sola fila:
+console.log(Edades[1]); //Mostrará [48, 93, 100]
+
+
+-Para llamar a una columna de una fila:
+Se usa un doble corchete el primero, accede a la fila y el segundo a la columna
+
+console.log(Edades[2][0]); //Mostrará 11
+
+
+
+--------------------------------------RECORRIDO DE UNA MATRIZ--------------------------------------
+Para acceder a elementos de una matriz es muy comun usar el Bucle for:
+
+POR EJEMPLO, queremos queremos acceder a la columna 0 de todas las filas de una Matriz:
+
+const Edades = [
+	[20, 13, 45],
+	[48, 93, 100],
+	[11, 7, 9, 40]
+]
+
+for (let i=0; i < Edades.length; i++){
+	console.log(matriz[i][0]);
+}
+
+//ITERAMOS SOBRE LA MATRIZ Y DEVOLVEMOS EL VALOR DE CADA FILA EN LA COLUMNA 0
+
+
+SI QUEREMOS RECORRER POR FILAS ES MAS DIFICL, NECESITAMOS UN DOBLE FOR:
+const Edades = [
+	[20, 13, 45],
+	[48, 93, 100],
+	[11, 7, 9, 40]
+]
+
+
+for (let fila = 0; fila < Edades.length; fila++){    //Iteramos En las filas de Edades que en este caso son 3, 
+						     //La primer iteracion "fila", tendra el valor de 0, asique estaremos 
+						     //parados en la fila [20, 13, 45]
+	
+	for(let columna = 0; columna < Edades[fila].length; columna++){  //Ahora estamos creando la iteracion de las columnas. Iteramos 
+									// sobre la Matriz "Edades" en la pocicion de "fila". 
+								       //La variable "columna" empezará valiendo 0. y Va A iterar segun
+								      //la longitud de la fila
+
+		console.log(Edades[fila][columna]); 
+	}
+
+}
+//Esto Mostrará en consola Todos los valores de la matriz, iterando sobre ellos
+
+
+
+
+
+
+
