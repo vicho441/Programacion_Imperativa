@@ -18,5 +18,5 @@ function generarMatriz10por10(filas, columnas, max, min) {
     return Matriz
 }
 
-let matriz10por10 = generarMatriz10por10(3, 3, 1, 50);
-console.table(matriz10por10);
+let matriz10por10 = generarMatriz10por10(4, 7, 900, 2000);
+console.log(matriz10por10);

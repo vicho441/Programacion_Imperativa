@@ -1,0 +1,58 @@
+----------------------------------DEFINICION:----------------------------------
+Bublle Sort es el nombre de un algoritmo de ordenamiento de numeros. este puede ser ascendente y descendente
+
+Let arrayNum = [6, 3, 4, 8, 2];
+
+//Si queremos ordenarlos de menor a mayor tenemos que aplicar un Algoritmo Bublle sort para que quede:
+Let arrayNum = [2, 3, 4, 6, 8];
+
+//La forma de hacerlo es Iterando en el arreglo y posicionando Los numeros 
+
+
+----------------------------------COMO HACERLO:----------------------------------
+Se itera, asique con buvles for, primero vamos a posicionarnos en un numero, despues, ese numero itera en todo el arreglo
+
+//TENEMOS QUE ORDENAR ESTE ARRAY
+Let arrayNum = [6, 3, 4, 8, 2];
+
+PASO 1: 
+
+for(let i = 0; i < arrayNum.length; i++) {
+	//NOS POSICIONAMOS EN UN NUMERO, EN LA PRIMERA ITERACION VAMOS A ESTAR EN EL NUMERO EN LA POCICION 0, QUE EN ESTE CASO VA A SER 6
+}
+
+
+PASO 2: 
+
+for(let i = 0; i < arrayNum.length; i++) {
+	//NOS POSICIONAMOS EN UN NUMERO, EN LA PRIMERA ITERACION VAMOS A ESTAR EN EL NUMERO EN LA POCICION 0, QUE EN ESTE CASO VA A SER 6
+
+	for (let j = 0; j < arrayNum.length; j++) {
+		//ITERAMOS CON EL NUMERO EN EL ARREGLO
+	}
+}
+
+
+PASO 3 y final, usamos un if para ir posicionando el Num:
+
+for (let i = 0; i < arrayNum.length; i++) {
+	for (let j = 0; j < arrayNum.length; j++) {
+		if (arrayNum[j] > arrayNum[j + 1]) {
+			let temp = arrayNum[j];
+			arrayNum[j] = arrayNum[j + 1];
+			arrayNum[j + 1] = temp;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
